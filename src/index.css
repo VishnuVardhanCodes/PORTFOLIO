@@ -22,6 +22,7 @@ body {
   padding: 100px 0;
   display: flex;
   align-items: center;
+  background: transparent;
 }
 
 /* Glassmorphism Card */
@@ -46,15 +47,16 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* Nav Link */
-.nav-link {
-  color: #ccc !important;
+/* Navbar Links */
+.custom-navbar .nav-link {
+  color: #ffffff !important;
   margin: 0 10px;
+  font-weight: 500;
   transition: 0.3s;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
   color: #00f5a0 !important;
 }
 
@@ -68,4 +70,54 @@ body {
 
 .btn-custom:hover {
   opacity: 0.85;
+}
+
+/* Footer */
+.footer-section {
+  background: transparent;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer Heading */
+.footer-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+/* Footer Subheading */
+.footer-section p.mb-4 {
+  font-size: 1.7rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Footer Icons */
+.footer-icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 2.8rem;
+  margin: 0 1.2rem;
+}
+
+.footer-icon:hover {
+  color: #00f5a0;
+  transform: translateY(-4px);
+}
+
+/* Footer Copyright */
+.footer-section p.opacity-75 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+}
+
+/* Layering */
+.section,
+nav,
+footer {
+  position: relative;
+  z-index: 1;
 }

@@ -16,18 +16,14 @@ function About() {
               Vishnu Vardhan
             </h1>
             <h4 className="mb-3">
-              Student | Frontend Developer | AI Enthusiast
+              Student | Frontend Developer | AI Enthusiast | Video Editing 
             </h4>
 
             <div className="glass-card mt-4">
               <p>
-                I am a passionate frontend developer with strong interest in
-                building modern, responsive web applications. I enjoy working
-                with React, UI/UX design, and exploring AI-driven solutions.
-              </p>
-              <p>
-                My goal is to grow as a full-stack developer and contribute to
-                impactful real-world projects.
+                I am a passionate AI & frontend developer who enjoys creating modern, user-friendly 
+                web applications using React and Bootstrap. Alongside academics, I actively participate in hackathons, 
+                build AI-driven projects, and continuously improve my problem-solving and development skills.
               </p>
 
               <Button className="btn-custom mt-3">
@@ -40,8 +36,8 @@ function About() {
         {/* Right Content */}
         <Col md={6} className="text-center mt-5 mt-md-0">
           <motion.img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-            alt="hero"
+            src="vishnu.jpeg"
+            alt="Vishnu Vardhan"
             width="250"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}

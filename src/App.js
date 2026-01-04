@@ -7,10 +7,15 @@ import Projects from "./components/Projects";
 import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Galaxy from "./components/Galaxy";
 
 function App() {
   return (
     <>
+      {/* Galaxy Background */}
+      <Galaxy />
+
+      {/* Content */}
       <NavbarComponent />
 
       <section id="about" className="section">

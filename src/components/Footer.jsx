@@ -5,33 +5,34 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 function Footer() {
   return (
     <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      style={{
-        background: "#ffffff",
-        color: "#000",
-        padding: "100px 0",
-        textAlign: "center",
-      }}
+      className="footer-section"
     >
       <Container>
         <h1 className="fw-bold mb-3">
           Let&apos;s create something <br /> amazing together.
         </h1>
 
-        <p className="text-muted mb-4">
+        <p className="mb-4 text-light">
           Get in touch via email or social media.
         </p>
 
-        <div className="d-flex justify-content-center gap-4 fs-3">
-          <FaEnvelope style={{ cursor: "pointer" }} />
-          <FaGithub style={{ cursor: "pointer" }} />
-          <FaLinkedin style={{ cursor: "pointer" }} />
+        <div className="d-flex justify-content-center gap-4 fs-3 mb-4">
+          <a href="mailto:vishnumaxpolla32@gmail.com" className="footer-icon" title="Email">
+            <FaEnvelope />
+          </a>
+          <a href="https://github.com/VishnuVardhanCodes" className="footer-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/polla-vishnu-vardhan/" className="footer-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <FaLinkedin />
+          </a>
         </div>
 
-        <p className="mt-5 text-muted">
-          © {new Date().getFullYear()} Vishnu Vardhan
+        <p className="text-light opacity-75">
+          © {new Date().getFullYear()} Polla Vishnu Vardhan
         </p>
       </Container>
     </motion.footer>
