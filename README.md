@@ -72,27 +72,10 @@ Footer – Social presence and contact icons
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-📁 **Project Structure**
-src/
- ┣ components/
- ┃ ┣ Navbar.jsx
- ┃ ┣ About.jsx
- ┃ ┣ Education.jsx
- ┃ ┣ Skills.jsx
- ┃ ┣ Experience.jsx
- ┃ ┣ Projects.jsx
- ┃ ┣ Achievements.jsx
- ┃ ┣ Contact.jsx
- ┃ ┗ Footer.jsx
- ┣ App.js
- ┣ index.js
- ┗ index.css
-
- <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ▶️ **Getting Started**
 Clone the repository
-git clone https://github.com/your-username/PORTFOLIO.git
+git clone : https://github.com/VishnuVardhanCodes/PORTFOLIO
 
 Navigate into the project
 cd PORTFOLIO
