@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 function Contact() {
@@ -9,55 +9,88 @@ function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-center mb-4 gradient-text fw-bold">
-          Contact Me
-        </h2>
+        <Row className="align-items-center justify-content-center">
+          
+          {/* LEFT SIDE IMAGE */}
+          <Col md={6} className="text-center mb-4 mb-md-0">
+            <img
+              src="contact-image.png"   // ✅ CORRECT PATH
+              alt="Contact Illustration"
+              style={{
+                maxWidth: "340px",
+                width: "100%",
+                height: "auto",
+                margin: "0 auto",
+                display: "block",
+              }}
+            />
+          </Col>
 
-        <p className="text-center mb-5">
-          Have a question, idea, or want to work together?  
-          Feel free to reach out using the form below.
-        </p>
+          {/* RIGHT SIDE FORM */}
+          <Col md={6}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "2rem",
+                gap: "1rem",
+              }}
+            >
+              <div
+                style={{
+                  background: "#e0f3ff",
+                  borderRadius: "16px",
+                  padding: "0.7rem",
+                }}
+              >
+                <i
+                  className="fas fa-paper-plane"
+                  style={{ color: "#1abc9c", fontSize: "2.5rem" }}
+                ></i>
+              </div>
+              <h2 style={{ fontWeight: 700, fontSize: "2.2rem", margin: 0 }}>
+                Send a Message
+              </h2>
+            </div>
 
-        <Row className="justify-content-center">
-          <Col md={8}>
-            <Card className="glass-card">
-              <Card.Body>
-                <Form>
-                  <Row>
-                    <Col md={6} className="mb-3">
-                      <Form.Label>Name</Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter your name"
-                      />
-                    </Col>
+            <Form>
+              <Row>
+                <Col md={6} className="mb-3">
+                  <Form.Label>Your Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your name"
+                    className="rounded-3 p-3"
+                  />
+                </Col>
 
-                    <Col md={6} className="mb-3">
-                      <Form.Label>Email</Form.Label>
-                      <Form.Control
-                        type="email"
-                        placeholder="Enter your email"
-                      />
-                    </Col>
-                  </Row>
+                <Col md={6} className="mb-3">
+                  <Form.Label>Your Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter your email"
+                    className="rounded-3 p-3"
+                  />
+                </Col>
+              </Row>
 
-                  <Form.Group className="mb-4">
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control
-                      as="textarea"
-                      rows={4}
-                      placeholder="Tell me about your idea or query..."
-                    />
-                  </Form.Group>
+              <Form.Group className="mb-4">
+                <Form.Label>Your Message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={4}
+                  placeholder="Tell me about your project..."
+                  className="rounded-3 p-3"
+                />
+              </Form.Group>
 
-                  <div className="text-center">
-                    <Button className="btn-custom px-5">
-                      Send Message
-                    </Button>
-                  </div>
-                </Form>
-              </Card.Body>
-            </Card>
+              <Button
+                className="btn-custom w-100 py-3"
+                style={{ fontSize: "1.3rem" }}
+              >
+                Send Message <i className="fas fa-paper-plane ms-2"></i>
+              </Button>
+            </Form>
           </Col>
         </Row>
       </motion.div>

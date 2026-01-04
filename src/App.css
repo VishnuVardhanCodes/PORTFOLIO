@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* About Icons */
+.about-icon {
+  font-size: 3.5rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.about-icon:hover {
+  color: #00f5a0;
+  transform: translateY(-6px);
+}

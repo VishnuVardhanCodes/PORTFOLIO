@@ -15,8 +15,8 @@ function NavbarComponent() {
           <img
             src="/logo.jpg"   /* keep image inside public folder */
             alt="Vishnu Vardhan Logo"
-            width="42"
-            height="42"
+            width="50"
+            height="50"
             className="me-2"
           />
           <span className="fw-bold text-white">Vishnu Vardhan</span>
