@@ -14,7 +14,7 @@ function Contact() {
           {/* LEFT SIDE IMAGE */}
           <Col md={6} className="text-center mb-4 mb-md-0">
             <img
-              src="contact-image.png"   // ✅ CORRECT PATH
+              src="images\contact-image.png"   // ✅ CORRECT PATH
               alt="Contact Illustration"
               style={{
                 maxWidth: "340px",
