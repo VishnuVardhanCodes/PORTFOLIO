@@ -54,21 +54,21 @@ Git & GitHub
 
 **The portfolio is organized into full-screen vertical sections**:
 
-About Me – Introduction, role, goals, and strengths
+-About Me – Introduction, role, goals, and strengths
 
-Education – Academic background and achievements
+-Education – Academic background and achievements
 
-Technical Skills – Tools, technologies, and proficiency
+-Technical Skills – Tools, technologies, and proficiency
 
-Professional Experience – Internships and hands-on work
+-Professional Experience – Internships and hands-on work
 
-Projects – Featured projects with tech stack details
+-Projects – Featured projects with tech stack details
 
-Achievements & Resume – Certifications, workshops, resume access
+-Achievements & Resume – Certifications, workshops, resume access
 
-Contact – Message form for collaboration
+-Contact – Message form for collaboration
 
-Footer – Social presence and contact icons
+-Footer – Social presence and contact icons
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
