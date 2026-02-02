@@ -54,12 +54,14 @@ function About() {
               {/* ICONS BELOW DESCRIPTION */}
               <div className="about-icons">
                 <a
-                  href="mailto:vishnumaxpolla32@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=vishnumaxpolla32@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Send email"
                 >
-                  <FaEnvelope />
-                </a>
+                <FaEnvelope />
+                 </a>
+
 
                 <a
                   href="https://github.com/VishnuVardhanCodes"

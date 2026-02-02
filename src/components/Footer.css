@@ -1,0 +1,65 @@
+.footer-section {
+  padding: 5rem 0;
+  background: transparent;
+  color: white;
+}
+
+/* Heading */
+.footer-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+/* Subtitle */
+.footer-subtitle {
+  font-size: 1.35rem;
+  opacity: 0.85;
+  margin-bottom: 2.5rem;
+}
+
+/* Icons container */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Icon buttons */
+.footer-icon {
+  font-size: 2.6rem;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.footer-icon:hover {
+  color: #00ffc3;
+  transform: scale(1.25);
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 2.3rem;
+  }
+
+  .footer-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .footer-icon {
+    font-size: 2rem;
+    padding: 12px;
+  }
+}
