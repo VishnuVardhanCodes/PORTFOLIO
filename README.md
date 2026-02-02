@@ -54,7 +54,7 @@ Git & GitHub
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-**The portfolio is organized into full-screen vertical sections**:
+**The portfolio is organized into full-screen vertical sections**
 
 -About Me – Introduction, role, goals, and strengths
 
