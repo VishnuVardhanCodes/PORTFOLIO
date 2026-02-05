@@ -19,7 +19,7 @@ function NavbarComponent() {
             height="50"
             className="me-2"
           />
-          <span className="fw-bold text-white">Vishnu Vardhan</span>
+          <span className="fw-bold text-white">VISHNU VARDHAN</span>
         </Navbar.Brand>
 
         {/* Toggle Button */}

@@ -17,11 +17,11 @@ function About() {
               style={{
                 color: "#C77DDB",
                 fontWeight: "bold",
-                fontSize: "4.5rem",
+                fontSize: "4.0rem",
                 marginBottom: "2rem",
               }}
             >
-              Vishnu Vardhan
+              VISHNU VARDHAN 
             </h1>
 
             <h4
