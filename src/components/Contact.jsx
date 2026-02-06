@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 
+// ...existing code...
 function Contact() {
   return (
     <Container>
@@ -99,3 +100,4 @@ function Contact() {
 }
 
 export default Contact;
+

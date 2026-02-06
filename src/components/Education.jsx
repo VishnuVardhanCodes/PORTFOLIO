@@ -1,6 +1,7 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 
+// ...existing code...
 function Education() {
   return (
     <Container>
@@ -71,3 +72,4 @@ function Education() {
 }
 
 export default Education;
+

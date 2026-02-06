@@ -1,51 +1,73 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { FaMoon } from "react-icons/fa";
+import BubbleMenu from "./BubbleMenu";
+
+const items = [
+  {
+    label: "About",
+    href: "#about",
+    ariaLabel: "About",
+    rotation: -8,
+    hoverStyles: { bgColor: "#3b82f6", textColor: "#ffffff" },
+  },
+  {
+    label: "Education",
+    href: "#education",
+    ariaLabel: "Education",
+    rotation: 8,
+    hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
+  },
+  {
+    label: "Skills",
+    href: "#skills",
+    ariaLabel: "Skills",
+    rotation: -6,
+    hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
+  },
+  {
+    label: "Experience",
+    href: "#experience",
+    ariaLabel: "Experience",
+    rotation: 8,
+    hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
+  },
+  {
+    label: "Projects",
+    href: "#projects",
+    ariaLabel: "Projects",
+    rotation: -4,
+    hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },
+  },
+  {
+    label: "Achievements",
+    href: "#achievements",
+    ariaLabel: "Achievements",
+    rotation: 6,
+    hoverStyles: { bgColor: "#ec4899", textColor: "#ffffff" },
+  },
+  {
+    label: "Contact",
+    href: "#contact",
+    ariaLabel: "Contact",
+    rotation: -8,
+    hoverStyles: { bgColor: "#14b8a6", textColor: "#ffffff" },
+  },
+];
 
 function NavbarComponent() {
   return (
-    <Navbar
-      expand="lg"
-      fixed="top"
-      variant="dark"
-      className="custom-navbar"
-    >
-      <Container>
-        {/* Left Logo */}
-        <Navbar.Brand href="#about" className="d-flex align-items-center">
-          <img
-            src="/logo.jpg"   /* keep image inside public folder */
-            alt="Vishnu Vardhan Logo"
-            width="50"
-            height="50"
-            className="me-2"
-          />
-          <span className="fw-bold text-white">VISHNU VARDHAN</span>
-        </Navbar.Brand>
-
-        {/* Toggle Button */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-        <Navbar.Collapse id="basic-navbar-nav">
-          {/* Center Nav */}
-          <Nav className="mx-auto text-center">
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#education">Education</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#experience">Experience</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#achievements">Achievements</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-
-          {/* Right Theme Button */}
-          <Nav>
-            <Nav.Link className="theme-toggle">
-              <FaMoon />
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <BubbleMenu
+      logo="/logo.jpg"
+      items={items}
+      toggleTheme={() => {
+        document.body.classList.toggle('light-theme');
+      }}
+      menuAriaLabel="Toggle navigation"
+      menuBg="#ffffff"
+      menuContentColor="#111111"
+      useFixedPosition={true}
+      animationEase="back.out(1.5)"
+      animationDuration={0.5}
+      staggerDelay={0.12}
+    />
   );
 }
 

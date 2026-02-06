@@ -8,6 +8,7 @@ import {
   FaDownload,
 } from "react-icons/fa";
 
+// ...existing code...
 function Achievements() {
   return (
     <Container>
@@ -106,3 +107,4 @@ function Achievements() {
 }
 
 export default Achievements;
+

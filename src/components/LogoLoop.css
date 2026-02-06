@@ -10,8 +10,10 @@
   margin: 0;
 
   /* 🔥 MAIN CONTROLS (edit anytime) */
-  --icon-size: 80px;   /* ICON SIZE */
-  --icon-gap: 70px;    /* SPACE BETWEEN ICONS */
+  --icon-size: 100px;
+  /* ICON SIZE */
+  --icon-gap: 100px;
+  /* SPACE BETWEEN ICONS */
 }
 
 /* Moving track */
@@ -21,13 +23,14 @@
   width: max-content;
   will-change: transform;
 
-  padding-left: 0;    /* 🔥 removes left empty space */
+  padding-left: 0;
+  /* 🔥 removes left empty space */
   margin-left: 0;
 }
 
 /* Each icon */
 .logoloop__item {
-  color: #ffffff;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +42,7 @@
 
 /* Hover effect */
 .logoloop__item:hover {
-  color: #00f5a0;
+  color: var(--accent-color);
   transform: scale(1.25) translateY(-6px);
 }
 

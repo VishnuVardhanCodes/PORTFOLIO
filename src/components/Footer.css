@@ -1,7 +1,7 @@
 .footer-section {
   padding: 5rem 0;
   background: transparent;
-  color: white;
+  color: var(--text-primary);
 }
 
 /* Heading */
@@ -30,7 +30,7 @@
 /* Icon buttons */
 .footer-icon {
   font-size: 2.6rem;
-  color: white;
+  color: var(--text-primary);
   padding: 16px;
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -38,7 +38,7 @@
 
 /* Hover effect */
 .footer-icon:hover {
-  color: #00ffc3;
+  color: var(--accent-color);
   transform: scale(1.25);
 }
 

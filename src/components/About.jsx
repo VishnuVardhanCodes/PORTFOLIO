@@ -2,6 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
+// ...existing code...
+// No local About variable definition, only export default
 function About() {
   return (
     <Container>
@@ -100,3 +102,4 @@ function About() {
 }
 
 export default About;
+

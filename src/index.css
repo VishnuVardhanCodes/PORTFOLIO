@@ -16,11 +16,47 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  /* DARK THEME (DEFAULT) */
+  --bg-body: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #333333;
+  --nav-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  --accent-gradient: linear-gradient(90deg, #00f5a0, #00d9f5);
+  --about-icon-color: #ffffff;
+}
+
+/* LIGHT THEME OVERRIDES */
+body.light-theme {
+  --bg-body: linear-gradient(135deg, #fdfbfb, #ebedee);
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(0, 0, 0, 0.7);
+
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #1a1a1a;
+  --nav-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  --accent-gradient: linear-gradient(90deg, #00b09b, #96c93d);
+  /* Fresh Green/Teal for light mode */
+  --about-icon-color: #333333;
+}
+
 body {
   font-family: "Segoe UI", system-ui, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
+  background: var(--bg-body);
+  color: var(--text-primary);
   overflow-x: hidden;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 /* ===============================
@@ -40,14 +76,16 @@ body {
    GLASSMORPHISM CARD
 ================================ */
 .glass-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 50px 60px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  box-shadow: var(--card-shadow);
   max-width: 900px;
   margin: 0 auto;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+  color: var(--text-primary);
 }
 
 /* ===============================
@@ -58,7 +96,7 @@ body {
   height: 70vh;
   object-fit: contain;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  box-shadow: var(--card-shadow);
   max-width: 100%;
   max-height: 100%;
   display: block;
@@ -69,7 +107,8 @@ body {
    GRADIENT TEXT
 ================================ */
 .gradient-text {
-  background: linear-gradient(90deg, #00f5a0, #00d9f5);
+  background: var(--accent-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -77,6 +116,7 @@ body {
 /* ===============================
    NAVBAR
 ================================ */
+/* Note: Navbar uses BubbleMenu now, but ensuring legacy styles don't conflict */
 .custom-navbar {
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
@@ -86,7 +126,7 @@ body {
 }
 
 .custom-navbar .nav-link {
-  color: #ffffff !important;
+  color: var(--text-primary) !important;
   margin: 0 10px;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -95,15 +135,17 @@ body {
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link.active {
   color: #00f5a0 !important;
+  /* Keep accent for now */
 }
 
 /* ===============================
    BUTTONS
 ================================ */
 .btn-custom {
-  background: linear-gradient(90deg, #00f5a0, #00d9f5);
+  background: var(--accent-gradient);
   border: none;
-  color: #000;
+  color: white;
+  /* Often white text on accent looks best, or calculate contrast */
   font-weight: 600;
 }
 
@@ -120,6 +162,7 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
+  color: var(--text-primary);
 }
 
 .footer-section h1 {
@@ -136,7 +179,7 @@ body {
 .footer-icon {
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 2.8rem;
   margin: 0 1.2rem;
 }
@@ -162,7 +205,7 @@ body {
 
 .about-icons a {
   font-size: 4.2rem;
-  color: #ffffff;
+  color: var(--about-icon-color);
   transition: all 0.35s ease;
 }
 

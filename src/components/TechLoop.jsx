@@ -47,19 +47,20 @@ const techLogos = [
 function TechLoop() {
   return (
     <div className="skills-section">
-      <Container className="text-center">
+      <Container fluid className="text-center px-0">
         {/* 🔥 SECTION TITLE */}
         <h2 className="gradient-text fw-bold mb-5 skills-title">
           SKILLS
         </h2>
 
         {/* 🔁 LOGO LOOP */}
-        <div className="skills-loop-wrapper">
+        <div className="skills-loop-wrapper w-100">
           <LogoLoop
             logos={techLogos}
-            speed={1}                 /* slow & smooth */
+            speed={1.5}                 /* slightly faster */
             direction="left"
             scaleOnHover
+            logoSize={100} /* Increased size */
             ariaLabel="Skills and tools"
           />
         </div>

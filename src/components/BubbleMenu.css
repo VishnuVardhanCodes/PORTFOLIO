@@ -1,0 +1,119 @@
+/* Container for the floating pill */
+.bubble-menu-container {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  box-shadow: var(--nav-shadow);
+
+  z-index: 1000;
+  width: 95%;
+  /* End-to-end width with slight margin */
+  max-width: 1400px;
+  /* Max constraint for very large screens */
+  transition: all 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--nav-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+/* Logo Styles */
+.bubble-menu-logo {
+  display: flex;
+  align-items: center;
+}
+
+.bubble-menu-logo img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Navigation Links Wrapper */
+.bubble-menu-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Individual Links */
+.bubble-nav-link {
+  text-decoration: none;
+  color: var(--nav-text);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Link Hover Effects */
+.bubble-nav-link:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+  color: var(--nav-text);
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.bubble-nav-link:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .bubble-menu-container {
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    top: 1rem;
+    width: 90%;
+  }
+
+  .bubble-menu-nav {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    gap: 0.5rem;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .bubble-menu-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bubble-nav-link {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

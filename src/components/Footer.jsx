@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
+// ...existing code...
 function Footer() {
   return (
     <motion.footer
@@ -63,3 +64,4 @@ function Footer() {
 }
 
 export default Footer;
+
