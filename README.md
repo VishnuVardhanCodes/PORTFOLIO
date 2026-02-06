@@ -14,9 +14,9 @@ This portfolio reflects my journey as a Student, Frontend Developer, and AI Enth
 
 🛠️ **Tech Stack**
 
-React (Create React App)
+- React (Create React App)
 
-Bootstrap 5 / React-Bootstrap
+- Bootstrap 5 / React-Bootstrap
 
 Framer Motion (Animations)
 
