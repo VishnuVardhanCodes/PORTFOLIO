@@ -1,4 +1,6 @@
+import { Container } from "react-bootstrap";
 import LogoLoop from "./LogoLoop";
+
 import {
   SiPython,
   SiHtml5,
@@ -19,6 +21,7 @@ import {
   SiCanva
 } from "react-icons/si";
 
+/* 🔹 Skills & Tools Icons */
 const techLogos = [
   { node: <SiPython />, title: "Python" },
   { node: <SiHtml5 />, title: "HTML" },
@@ -41,10 +44,28 @@ const techLogos = [
   { node: <SiCanva />, title: "Canva" },
 ];
 
-export default function TechLoop() {
+function TechLoop() {
   return (
-    <div style={{ margin: "80px 0" }}>
-      <LogoLoop logos={techLogos} speed={0.6} logoSize={64} />
+    <div className="skills-section">
+      <Container className="text-center">
+        {/* 🔥 SECTION TITLE */}
+        <h2 className="gradient-text fw-bold mb-5 skills-title">
+          SKILLS
+        </h2>
+
+        {/* 🔁 LOGO LOOP */}
+        <div className="skills-loop-wrapper">
+          <LogoLoop
+            logos={techLogos}
+            speed={1}                 /* slow & smooth */
+            direction="left"
+            scaleOnHover
+            ariaLabel="Skills and tools"
+          />
+        </div>
+      </Container>
     </div>
   );
 }
+
+export default TechLoop;

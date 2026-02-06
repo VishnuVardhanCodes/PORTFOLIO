@@ -1,23 +1,59 @@
+/* ================================
+   LOGO LOOP – CLEAN & FINAL
+================================ */
+
 .logoloop {
   overflow: hidden;
   width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  /* 🔥 MAIN CONTROLS (edit anytime) */
+  --icon-size: 80px;   /* ICON SIZE */
+  --icon-gap: 70px;    /* SPACE BETWEEN ICONS */
 }
 
+/* Moving track */
 .logoloop__track {
   display: flex;
-  gap: 60px;
+  gap: var(--icon-gap);
   width: max-content;
   will-change: transform;
+
+  padding-left: 0;    /* 🔥 removes left empty space */
+  margin-left: 0;
 }
 
+/* Each icon */
 .logoloop__item {
-  color: white;
+  color: #ffffff;
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease, color 0.3s ease;
+  justify-content: center;
+
+  font-size: var(--icon-size);
+
+  transition: transform 0.35s ease, color 0.35s ease;
 }
 
+/* Hover effect */
 .logoloop__item:hover {
   color: #00f5a0;
-  transform: scale(1.2);
+  transform: scale(1.25) translateY(-6px);
+}
+
+/* Icons rendered as React nodes */
+.logoloop__node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📱 Mobile optimization */
+@media (max-width: 768px) {
+  .logoloop {
+    --icon-size: 48px;
+    --icon-gap: 45px;
+  }
 }
