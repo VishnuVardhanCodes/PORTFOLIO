@@ -1,4 +1,4 @@
-**🚀POLLA VISHNU VARDHAN  | Professional Portfolio**
+**🚀POLLA VISHNU VARDHAN  | **Professional Portfolio****
 
 A modern, fully responsive single-page professional portfolio web application built using React (Create React App) and Bootstrap, designed to showcase my skills, projects, experience, and achievements in a clean and visually engaging way.
 
