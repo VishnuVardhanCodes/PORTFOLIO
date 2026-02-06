@@ -16,7 +16,6 @@ import {
   SiGitlab,
   SiDocker,
   SiJupyter,
-  SiVisualstudiocode,
   SiCanva
 } from "react-icons/si";
 
@@ -39,7 +38,6 @@ const techLogos = [
   { node: <SiGitlab />, title: "GitLab" },
   { node: <SiDocker />, title: "Docker" },
   { node: <SiJupyter />, title: "Jupyter" },
-  { node: <SiVisualstudiocode />, title: "VS Code" },
   { node: <SiCanva />, title: "Canva" },
 ];
 
