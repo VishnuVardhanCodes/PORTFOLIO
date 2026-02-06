@@ -1,0 +1,23 @@
+.logoloop {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logoloop__track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  will-change: transform;
+}
+
+.logoloop__item {
+  color: white;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logoloop__item:hover {
+  color: #00f5a0;
+  transform: scale(1.2);
+}
