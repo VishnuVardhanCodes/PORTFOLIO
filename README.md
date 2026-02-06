@@ -18,9 +18,9 @@ This portfolio reflects my journey as a Student, Frontend Developer, and AI Enth
 
 - Bootstrap 5 / React-Bootstrap
 
-Framer Motion (Animations)
+- Framer Motion (Animations)
 
-React Icons
+- React Icons
 
 Custom CSS
 
