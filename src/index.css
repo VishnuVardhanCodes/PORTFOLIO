@@ -1,9 +1,4 @@
 /* ===============================
-   GOOGLE FONT IMPORT
-================================ */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Permanent+Marker&display=swap");
-
-/* ===============================
    GLOBAL RESET
 ================================ */
 * {
@@ -31,6 +26,10 @@ html {
 
   --accent-gradient: linear-gradient(90deg, #00f5a0, #00d9f5);
   --about-icon-color: #ffffff;
+
+  /* FONTS */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 /* LIGHT THEME OVERRIDES */
@@ -52,11 +51,20 @@ body.light-theme {
 }
 
 body {
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg-body);
   color: var(--text-primary);
   overflow-x: hidden;
   transition: background 0.5s ease, color 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
 
 /* ===============================
@@ -166,13 +174,13 @@ body {
 }
 
 .footer-section h1 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 800;
   margin-bottom: 2rem;
 }
 
 .footer-section p.mb-4 {
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -180,7 +188,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   color: var(--text-primary);
-  font-size: 2.8rem;
+  font-size: 4rem;
   margin: 0 1.2rem;
 }
 
@@ -190,7 +198,7 @@ body {
 }
 
 .footer-section p.opacity-75 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin-top: 2.5rem;
 }
 

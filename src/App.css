@@ -69,9 +69,8 @@
 }
 
 /* Title font customization */
-/* Title font customization */
 .skills-title {
-  font-family: "Permanent Marker", cursive;
+  font-family: var(--font-heading);
   font-size: 6rem;
   /* Make it NOW */
   color: #4aaeff;
