@@ -52,12 +52,7 @@
 }
 
 /* Skills section title font */
-.skills-title {
-  font-family: "Orbitron", sans-serif;
-  /* futuristic / tech */
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-}
+
 
 /* Center skills section vertically */
 .skills-section {
@@ -74,10 +69,14 @@
 }
 
 /* Title font customization */
+/* Title font customization */
 .skills-title {
-  letter-spacing: 0.3em;
-  font-family: "Poppins", "Montserrat", sans-serif;
-  font-size: 5rem;
-  /* Make it BIG */
-  margin-bottom: 4rem !important;
+  font-family: "Permanent Marker", cursive;
+  font-size: 6rem;
+  /* Make it NOW */
+  color: #4aaeff;
+  /* Handwritten Blue */
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem !important;
+  text-shadow: 0 0 10px rgba(74, 174, 255, 0.3);
 }

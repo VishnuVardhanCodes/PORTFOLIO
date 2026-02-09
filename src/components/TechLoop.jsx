@@ -49,7 +49,7 @@ function TechLoop() {
     <div className="skills-section">
       <Container fluid className="text-center px-0">
         {/* 🔥 SECTION TITLE */}
-        <h2 className="gradient-text fw-bold mb-5 skills-title">
+        <h2 className="fw-bold mb-5 skills-title">
           SKILLS
         </h2>
 
