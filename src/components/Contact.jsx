@@ -1,8 +1,42 @@
+import React, { useRef, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
-// ...existing code...
-function Contact() {
+const Contact = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Keys are now loaded from the .env file
+    const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    emailjs
+      .sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form.current,
+        PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setLoading(false);
+          alert("Message sent successfully! I will get back to you soon.");
+          form.current.reset();
+        },
+        (error) => {
+          setLoading(false);
+          console.error("EmailJS Error:", error.text);
+          alert("Failed to send message. Please try again later or email me directly at vishnumaxpolla32@gmail.com");
+        }
+      );
+  };
+
   return (
     <Container>
       <motion.div
@@ -11,11 +45,11 @@ function Contact() {
         transition={{ duration: 0.8 }}
       >
         <Row className="align-items-center justify-content-center">
-          
+
           {/* LEFT SIDE IMAGE */}
           <Col md={6} className="text-center mb-4 mb-md-0">
             <img
-              src="images\contact-image.png"   // ✅ CORRECT PATH
+              src="images/contact-image.png"
               alt="Contact Illustration"
               style={{
                 maxWidth: "340px",
@@ -49,19 +83,21 @@ function Contact() {
                   style={{ color: "#1abc9c", fontSize: "2.5rem" }}
                 ></i>
               </div>
-              <h2 style={{ fontWeight: 700, fontSize: "2.2rem", margin: 0 }}>
-                Send a Message
+              <h2 style={{ fontWeight: 700, fontSize: "3.0rem", margin: 0 }}>
+                Let's Keep In Touch !
               </h2>
             </div>
 
-            <Form>
+            <Form ref={form} onSubmit={sendEmail}>
               <Row>
                 <Col md={6} className="mb-3">
                   <Form.Label>Your Name</Form.Label>
                   <Form.Control
                     type="text"
+                    name="user_name"
                     placeholder="Enter your name"
                     className="rounded-3 p-3"
+                    required
                   />
                 </Col>
 
@@ -69,8 +105,10 @@ function Contact() {
                   <Form.Label>Your Email</Form.Label>
                   <Form.Control
                     type="email"
+                    name="user_email"
                     placeholder="Enter your email"
                     className="rounded-3 p-3"
+                    required
                   />
                 </Col>
               </Row>
@@ -79,17 +117,21 @@ function Contact() {
                 <Form.Label>Your Message</Form.Label>
                 <Form.Control
                   as="textarea"
+                  name="message"
                   rows={4}
                   placeholder="Tell me about your project..."
                   className="rounded-3 p-3"
+                  required
                 />
               </Form.Group>
 
               <Button
+                type="submit"
                 className="btn-custom w-100 py-3"
                 style={{ fontSize: "1.3rem" }}
+                disabled={loading}
               >
-                Send Message <i className="fas fa-paper-plane ms-2"></i>
+                {loading ? "Sending..." : "Send Message"} <i className="fas fa-paper-plane ms-2"></i>
               </Button>
             </Form>
           </Col>
@@ -97,7 +139,6 @@ function Contact() {
       </motion.div>
     </Container>
   );
-}
+};
 
 export default Contact;
-
