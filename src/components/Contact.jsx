@@ -6,10 +6,12 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
+    setStatus({ type: "", message: "" });
 
     // Keys are now loaded from the .env file
     const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -26,13 +28,13 @@ const Contact = () => {
       .then(
         (result) => {
           setLoading(false);
-          alert("Message sent successfully! I will get back to you soon.");
+          setStatus({ type: "success", message: "Message sent successfully! I will get back to you soon. ✅" });
           form.current.reset();
         },
         (error) => {
           setLoading(false);
           console.error("EmailJS Error:", error.text);
-          alert("Failed to send message. Please try again later or email me directly at vishnumaxpolla32@gmail.com");
+          setStatus({ type: "error", message: "Failed to send message. Please email me directly at vishnumaxpolla32@gmail.com" });
         }
       );
   };
@@ -133,6 +135,23 @@ const Contact = () => {
               >
                 {loading ? "Sending..." : "Send Message"} <i className="fas fa-paper-plane ms-2"></i>
               </Button>
+
+              {status.message && (
+                <div
+                  style={{
+                    marginTop: "1rem",
+                    padding: "1rem",
+                    borderRadius: "8px",
+                    textAlign: "center",
+                    fontSize: "1.1rem",
+                    background: status.type === "success" ? "rgba(0, 245, 160, 0.2)" : "rgba(255, 100, 100, 0.2)",
+                    color: status.type === "success" ? "#00f5a0" : "#ff6464",
+                    border: status.type === "success" ? "1px solid #00f5a0" : "1px solid #ff6464"
+                  }}
+                >
+                  {status.message}
+                </div>
+              )}
             </Form>
           </Col>
         </Row>
