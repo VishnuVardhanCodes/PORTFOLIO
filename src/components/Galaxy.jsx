@@ -145,7 +145,7 @@ export default function Galaxy({
       window.removeEventListener("resize", resize);
       container.removeChild(gl.canvas);
     };
-  }, []);
+  }, [density, glowIntensity, hueShift, rotationSpeed, saturation, transparent]);
 
   return <div ref={ref} className="galaxy-container" />;
 }
