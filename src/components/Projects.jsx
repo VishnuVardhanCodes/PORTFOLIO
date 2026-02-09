@@ -11,6 +11,7 @@ function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
+        // title selection for the page
         <h2 className="text-center mb-5 gradient-text fw-bold">
           Projects
         </h2>
