@@ -93,7 +93,7 @@ function Education() {
                         maxHeight: '100%',
                         maxWidth: '120px',
                         objectFit: 'contain',
-                        filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.2))'
+                        filter: 'drop-shadow(0 0 12px rgba(255, 255, 255, 0.4))'
                       }}
                     />
                   </div>
