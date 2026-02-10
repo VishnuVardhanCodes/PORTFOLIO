@@ -17,12 +17,14 @@ function About() {
       >
         <h1
           style={{
-            color: "#C77DDB",
+            background: "linear-gradient(90deg, #e040fb, #f48fb1, #ffcc80)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
             fontWeight: "bold",
             fontSize: "4.5rem",
             marginBottom: "1rem",
             letterSpacing: "2px",
-            textShadow: "0 0 20px rgba(199, 125, 219, 0.4)",
+            textShadow: "none",
           }}
         >
           VISHNU VARDHAN
