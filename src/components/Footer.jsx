@@ -16,7 +16,7 @@ function Footer() {
           Let&apos;s create something <br /> amazing together.
         </h1>
 
-        <p className="mb-4 text-light">
+        <p className="mb-4">
           Get in touch via email or social media.
         </p>
 
@@ -55,7 +55,7 @@ function Footer() {
           </a>
         </div>
 
-        <p className="text-light opacity-75">
+        <p className="opacity-75">
           © {new Date().getFullYear()} Polla Vishnu Vardhan
         </p>
       </Container>

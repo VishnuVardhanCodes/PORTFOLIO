@@ -21,66 +21,61 @@ uniform float uDensity;
 uniform float uHueShift;
 uniform float uGlowIntensity;
 uniform float uSaturation;
-uniform float uRotationSpeed;
-uniform bool uTransparent;
+uniform bool uInvert;
 
 varying vec2 vUv;
 
-#define NUM_LAYER 4.0
-
 float Hash21(vec2 p) {
-  p = fract(p * vec2(123.34, 456.21));
-  p += dot(p, p + 45.32);
-  return fract(p.x * p.y);
-}
-
-vec3 hsv2rgb(vec3 c) {
-  vec4 K = vec4(1.0, 2.0/3.0, 1.0/3.0, 3.0);
-  vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
-  return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
-}
-
-float Star(vec2 uv) {
-  float d = length(uv);
-  return (0.05 * uGlowIntensity) / d;
-}
-
-vec3 StarLayer(vec2 uv) {
-  vec3 col = vec3(0.0);
-  vec2 gv = fract(uv) - 0.5;
-  vec2 id = floor(uv);
-
-  for (int y = -1; y <= 1; y++) {
-    for (int x = -1; x <= 1; x++) {
-      vec2 si = id + vec2(float(x), float(y));
-      float seed = Hash21(si);
-      float size = fract(seed * 345.32);
-
-      float hue = fract(seed + uHueShift / 360.0);
-      vec3 color = hsv2rgb(vec3(hue, uSaturation, 1.0));
-
-      float star = Star(gv - vec2(x, y));
-      col += star * size * color;
-    }
-  }
-  return col;
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
 }
 
 void main() {
-  vec2 uv = (vUv - 0.5) * vec2(uResolution.x / uResolution.y, 1.0);
+    vec2 uv = (vUv - 0.5) * vec2(uResolution.x / uResolution.y, 1.0);
+    
+    // Scale UV for warp speed
+    float speed = uTime * 0.5;
+    
+    vec3 finalColor = vec3(0.0);
+    
+    // Create multiple layers of stars for depth
+    for(float i = 0.0; i < 6.0; i++) {
+        float size = 1.0 - i / 6.0;
+        float fade = fract(speed + i * 0.166);
+        
+        // Radial star movement
+        vec2 p = uv * mix(10.0, 0.05, fade);
+        p += 50.0 * i; // Offset layers
+        
+        vec2 id = floor(p);
+        vec2 gv = fract(p) - 0.5;
+        
+        float n = Hash21(id);
+        
+        // Star shape + glow
+        float d = length(gv);
+        float star = (0.02 * uGlowIntensity) / d;
+        
+        // Smooth fade out at edges and center
+        float mask = smoothstep(0.0, 0.5, fade) * smoothstep(1.0, 0.8, fade);
+        mask *= smoothstep(0.01, 0.1, length(uv)); // Hide center black hole
+        
+        // Color variation based on hueShift
+        vec3 col = 0.5 + 0.5 * cos(uHueShift * 0.01 + i + vec3(0, 2, 4));
+        
+        finalColor += star * mask * col;
+    }
 
-  float rot = uTime * uRotationSpeed;
-  mat2 r = mat2(cos(rot), -sin(rot), sin(rot), cos(rot));
-  uv = r * uv;
-
-  vec3 col = vec3(0.0);
-  for (float i = 0.0; i < 1.0; i += 1.0 / NUM_LAYER) {
-    float depth = fract(i + uTime * 0.05);
-    float scale = mix(20.0 * uDensity, 0.5 * uDensity, depth);
-    col += StarLayer(uv * scale + i * 400.0) * depth;
-  }
-
-  gl_FragColor = vec4(col, uTransparent ? length(col) : 1.0);
+    // Handle theme-based inversion
+    if(uInvert) {
+        // Dark stars on white background
+        finalColor = clamp(1.0 - finalColor, 0.0, 1.0);
+        gl_FragColor = vec4(finalColor, 1.0);
+    } else {
+        // Light stars on black background
+        gl_FragColor = vec4(finalColor, 1.0);
+    }
 }
 `;
 
@@ -89,16 +84,14 @@ export default function Galaxy({
   glowIntensity = 0.4,
   saturation = 0.6,
   hueShift = 220,
-  rotationSpeed = 0.08,
-  transparent = true,
+  isLightTheme = false,
 }) {
   const ref = useRef(null);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const container = ref.current;
 
-    const renderer = new Renderer({ alpha: transparent });
+    const renderer = new Renderer({ alpha: true });
     const gl = renderer.gl;
     container.appendChild(gl.canvas);
 
@@ -113,8 +106,7 @@ export default function Galaxy({
         uHueShift: { value: hueShift },
         uGlowIntensity: { value: glowIntensity },
         uSaturation: { value: saturation },
-        uRotationSpeed: { value: rotationSpeed },
-        uTransparent: { value: transparent },
+        uInvert: { value: isLightTheme },
       },
     });
 
@@ -145,7 +137,7 @@ export default function Galaxy({
       window.removeEventListener("resize", resize);
       container.removeChild(gl.canvas);
     };
-  }, [density, glowIntensity, hueShift, rotationSpeed, saturation, transparent]);
+  }, [density, glowIntensity, hueShift, isLightTheme, saturation]);
 
   return <div ref={ref} className="galaxy-container" />;
 }

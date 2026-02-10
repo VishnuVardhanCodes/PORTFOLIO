@@ -33,11 +33,17 @@ html {
   /* FONTS */
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
+  /* TYPING TEXT COLORS (DARK MODE) */
+  --typing-1: #00f5a0;
+  --typing-2: #ff007f;
+  --typing-3: #61dafb;
+  --typing-4: #ffcc80;
 }
 
 /* LIGHT THEME OVERRIDES */
 body.light-theme {
-  --bg-body: linear-gradient(135deg, #fdfbfb, #ebedee);
+  --bg-body: #ffffff;
+  background: #ffffff !important;
   --text-primary: #1a1a1a;
   --text-secondary: rgba(0, 0, 0, 0.7);
 
@@ -51,6 +57,11 @@ body.light-theme {
   --accent-gradient: linear-gradient(90deg, #00b09b, #96c93d);
   /* Fresh Green/Teal for light mode */
   --about-icon-color: #333333;
+  /* TYPING TEXT COLORS (LIGHT MODE - DEEPER CONTRAST) */
+  --typing-1: #00a876;
+  --typing-2: #d6006e;
+  --typing-3: #0084a8;
+  --typing-4: #c7882d;
 }
 
 body {
@@ -58,7 +69,11 @@ body {
   background: var(--bg-body);
   color: var(--text-primary);
   overflow-x: hidden;
-  transition: background 0.5s ease, color 0.5s ease;
+  transition: background 0.6s ease-in-out, color 0.5s ease;
+}
+
+.galaxy-container {
+  transition: opacity 0.6s ease-in-out;
 }
 
 h1,

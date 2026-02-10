@@ -14,7 +14,7 @@ function About() {
     <div className="d-flex flex-column justify-content-center h-100">
       <p
         style={{
-          color: "#ffffff",
+          color: "var(--text-primary)",
           fontSize: "1.25rem",
           lineHeight: "1.9",
           marginBottom: "3rem",
@@ -173,7 +173,7 @@ function About() {
             loop={true}
             showCursor={true}
             cursorCharacter="|"
-            textColors={["#d40c08", "#00f5a0", "#a64aff", "#ff0055"]}
+            textColors={["var(--typing-1)", "var(--typing-2)", "var(--typing-3)", "var(--typing-4)"]}
             className="about-typing-text"
             style={{
               fontWeight: "bold",

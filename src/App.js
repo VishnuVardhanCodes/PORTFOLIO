@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import NavbarComponent from "./components/Navbar";
 import About from "./components/About";
 import Education from "./components/Education";
@@ -10,13 +11,27 @@ import Galaxy from "./components/Galaxy";
 import TechLoop from "./components/TechLoop";
 
 function App() {
+  const [isLightTheme, setIsLightTheme] = useState(false);
+
+  const toggleTheme = () => {
+    setIsLightTheme((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (isLightTheme) {
+      document.body.classList.add("light-theme");
+    } else {
+      document.body.classList.remove("light-theme");
+    }
+  }, [isLightTheme]);
+
   return (
     <>
       {/* Galaxy Background */}
-      <Galaxy />
+      <Galaxy isLightTheme={isLightTheme} />
 
       {/* Navigation */}
-      <NavbarComponent />
+      <NavbarComponent toggleTheme={toggleTheme} isLightTheme={isLightTheme} />
 
       {/* About */}
       <section id="about" className="section">
