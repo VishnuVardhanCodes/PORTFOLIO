@@ -167,7 +167,7 @@ function About() {
 
         <div style={{ height: "80px", marginBottom: "2rem" }}>
           <TextType
-            text={["AI-ML STUDENT", "FRONTEND DEVELOPER", "VIDEO EDITING"]}
+            text={["AI-ML STUDENT", "FRONTEND DEVELOPER", "VIDEO EDITING", "4X HACKATHON WINNER"]}
             typingSpeed={100}
             deletingSpeed={50}
             loop={true}

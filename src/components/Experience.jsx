@@ -1,64 +1,120 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
+import "./Experience.css";
 
-// ...existing code...
+const experiences = [
+  {
+    side: "left",
+    date: "May 2025 – August 2025",
+    title: "Artificial Intelligence Intern [Hybrid]",
+    company: "Viswam.AI, Swecha Foundation, IIIT-H",
+    description: [
+      "Developed Streamlit-based AI applications integrating Hugging Face models for interactive Q&A.",
+      "Built RAG - Retrieval-Augmented Generation chatbots for generating accurate AI-powered summaries.",
+      "Implemented LLM integration, tokenization, and prompt handling for domain-specific queries."
+    ],
+    tags: ["Python", "Streamlit", "Hugging Face", "RAG", "LLM"],
+    logo: "/images/viswam_ai_logo.png"
+  },
+  {
+    side: "right",
+    date: "May 2025 – July 2025",
+    title: "Artificial Intelligence Intern [Hybrid]",
+    company: "GENAI Lakes, T-HUB",
+    description: [
+      " ",
+      "",
+
+    ],
+    tags: ["React", "Node.js", "PostgreSQL", "FastAPI", "Gemini API"],
+    logo: "/images/genai_lakes_logo.png"
+  },
+  {
+    side: "left",
+    date: "June 2024 – August 2024",
+    title: "Python Internship [Online]",
+    company: "",
+    description: [
+      "",
+      "",
+      ""
+    ],
+    tags: ["", "", ""],
+    logo: "/images/garuda3d_logo.png"
+  }
+
+];
+
 function Experience() {
   return (
-    <Container>
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center mb-5 gradient-text fw-bold">
-          Professional Experience
-        </h2>
+    <section className="experience-section" id="experience">
+      <Container>
+        <div className="experience-title-wrapper text-center">
+          <motion.h2
+            className="gradient-text fw-bold"
+            style={{ fontSize: "4rem" }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Internship Experience
+          </motion.h2>
+          <motion.p
+            className="experience-subtitle"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Where I transformed lessons into skills.
+          </motion.p>
+        </div>
 
-        <Row className="justify-content-center">
-          <Col md={8}>
-            {/* Experience 1 */}
-            <Card className="glass-card mb-4">
-              <Card.Body>
-                <h4>Frontend Developer Intern</h4>
-                <h6 className="text-muted">
-                  Company / Organization Name
-                </h6>
-                <p className="mb-2">
-                  <strong>Duration:</strong> Jan 2024 – Apr 2024
-                </p>
-                <ul>
-                  <li>Developed responsive UI components using React.</li>
-                  <li>Worked with Bootstrap to create clean layouts.</li>
-                  <li>Improved page performance and usability.</li>
-                  <li>Collaborated with team members using GitHub.</li>
+        <div className="experience-timeline">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              className={`timeline-item ${exp.side}`}
+              initial={{ opacity: 0, y: 100, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                mass: 1,
+                delay: index * 0.15
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              <div className="timeline-dot"></div>
+              <motion.div
+                className="timeline-card"
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <div className="company-logo-box">
+                  <img src={exp.logo} alt={exp.company} onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = '<div style="font-size: 2rem; color: #00d9f5;">🏢</div>'; }} />
+                </div>
+                <span className="experience-date">{exp.date}</span>
+                <h3 className="job-title">{exp.title}</h3>
+                <span className="company-name">{exp.company}</span>
+                <ul className="experience-list">
+                  {exp.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
-              </Card.Body>
-            </Card>
-
-            {/* Experience 2 */}
-            <Card className="glass-card">
-              <Card.Body>
-                <h4>Student Developer / Project Contributor</h4>
-                <h6 className="text-muted">
-                  Academic & Personal Projects
-                </h6>
-                <p className="mb-2">
-                  <strong>Duration:</strong> 2022 – Present
-                </p>
-                <ul>
-                  <li>Built multiple frontend projects using React.</li>
-                  <li>Implemented smooth scrolling and animations.</li>
-                  <li>Focused on UI/UX best practices.</li>
-                  <li>Explored AI-integrated web applications.</li>
-                </ul>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </motion.div>
-    </Container>
+                <div className="skill-tags">
+                  {exp.tags.map((tag, i) => (
+                    <span key={i} className="skill-tag">{tag}</span>
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 }
 
 export default Experience;
-

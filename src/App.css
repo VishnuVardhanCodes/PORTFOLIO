@@ -71,11 +71,23 @@
 /* Title font customization */
 .skills-title {
   font-family: var(--font-heading);
-  font-size: 6rem;
-  /* Make it NOW */
-  color: #4aaeff;
-  /* Handwritten Blue */
-  letter-spacing: 0.1em;
-  margin-bottom: 3rem !important;
-  text-shadow: 0 0 10px rgba(74, 174, 255, 0.3);
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #00d9f5;
+  /* Fallback color matching education */
+  font-size: 8rem;
+  /* Increased size as requested */
+  margin-bottom: 4rem !important;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(0, 217, 245, 0.3);
+  /* Cyan glow */
+  position: relative;
+  z-index: 20 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100%;
 }
