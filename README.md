@@ -114,9 +114,9 @@ The resume can be:
 
 - Highlight UI/UX design sense
 
-Serve as a placement-ready portfolio
+- Serve as a placement-ready portfolio
 
-Act as a base for future enhancements
+- Act as a base for future enhancements
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
