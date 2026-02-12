@@ -108,11 +108,11 @@ The resume can be:
 
 🎯 **Purpose of This Project**
 
-Showcase frontend development skills
+- Showcase frontend development skills
 
-Demonstrate clean React architecture
+- Demonstrate clean React architecture
 
-Highlight UI/UX design sense
+- Highlight UI/UX design sense
 
 Serve as a placement-ready portfolio
 
