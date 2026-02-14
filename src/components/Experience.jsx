@@ -14,13 +14,13 @@ const experiences = [
       "Implemented LLM integration, tokenization, and prompt handling for domain-specific queries."
     ],
     tags: ["Python", "Streamlit", "Hugging Face", "RAG", "LLM", "Git Hub"],
-    logo: "swecha.png"
+    logo: process.env.PUBLIC_URL + "/images/swecha.png"
   },
   {
     side: "right",
     date: "May 2025 – July 2025",
-    title: "",
-    company: "CodSoft ",
+    title: "Web Development Intern",
+    company: "CodSoft",
     description: [
       "Strengthened core knowledge in HTML, CSS, and JavaScript",
       "Developed a calculator and a to-do list using JavaScript",
@@ -28,7 +28,7 @@ const experiences = [
 
     ],
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Python", "Git Hub"],
-    logo: "codesoft.png"
+    logo: process.env.PUBLIC_URL + "/images/codesoft.png"
   },
   {
     side: "left",
@@ -39,8 +39,8 @@ const experiences = [
       "Built Python-based applications using core programming concepts ",
       "Applied Object-Oriented Programming (OOP) principles in real-world mini projects",
     ],
-    tags: ["", "", ""],
-    logo: "cognifyz.png"
+    tags: ["Python", "OOP", "Git Hub", "Problem Solving"],
+    logo: process.env.PUBLIC_URL + "/images/cognifyz.png"
   }
 
 ];
@@ -93,7 +93,7 @@ function Experience() {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <div className="company-logo-box">
-                  <img src={exp.logo} alt={exp.company} onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = '<div style="font-size: 2rem; color: #00d9f5;">🏢</div>'; }} />
+                  <img src={exp.logo} alt={`${exp.company} logo`} />
                 </div>
                 <span className="experience-date">{exp.date}</span>
                 <h3 className="job-title">{exp.title}</h3>
