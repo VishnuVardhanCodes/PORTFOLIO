@@ -84,16 +84,17 @@
 /* Logo Box */
 .company-logo-box {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 70px;
-    height: 70px;
-    background: rgba(255, 255, 255, 0.05);
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .company-logo-box img {
