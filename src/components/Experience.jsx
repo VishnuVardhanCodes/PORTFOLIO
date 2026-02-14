@@ -13,34 +13,34 @@ const experiences = [
       "Built RAG - Retrieval-Augmented Generation chatbots for generating accurate AI-powered summaries.",
       "Implemented LLM integration, tokenization, and prompt handling for domain-specific queries."
     ],
-    tags: ["Python", "Streamlit", "Hugging Face", "RAG", "LLM"],
-    logo: "/images/viswam_ai_logo.png"
+    tags: ["Python", "Streamlit", "Hugging Face", "RAG", "LLM", "Git Hub"],
+    logo: "swecha.png"
   },
   {
     side: "right",
     date: "May 2025 – July 2025",
-    title: "Artificial Intelligence Intern [Hybrid]",
-    company: "GENAI Lakes, T-HUB",
+    title: "",
+    company: "CodSoft ",
     description: [
-      " ",
-      "",
+      "Strengthened core knowledge in HTML, CSS, and JavaScript",
+      "Developed a calculator and a to-do list using JavaScript",
+      "Gained practical experience with Git and GitHub",
 
     ],
-    tags: ["React", "Node.js", "PostgreSQL", "FastAPI", "Gemini API"],
-    logo: "/images/genai_lakes_logo.png"
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Python", "Git Hub"],
+    logo: "codesoft.png"
   },
   {
     side: "left",
     date: "June 2024 – August 2024",
     title: "Python Internship [Online]",
-    company: "",
+    company: "Cognifyz Technologies",
     description: [
-      "",
-      "",
-      ""
+      "Built Python-based applications using core programming concepts ",
+      "Applied Object-Oriented Programming (OOP) principles in real-world mini projects",
     ],
     tags: ["", "", ""],
-    logo: "/images/garuda3d_logo.png"
+    logo: "cognifyz.png"
   }
 
 ];
