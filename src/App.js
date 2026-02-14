@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Galaxy from "./components/Galaxy";
 import TechLoop from "./components/TechLoop";
+import "./App.css";
 
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(false);
@@ -44,12 +45,12 @@ function App() {
       </section>
 
       {/* Technologies & Tools (Skills Replacement) */}
-      <section id="skills" className="section">
+      <section id="skills" className="section reduced-spacing-section">
         <TechLoop />
       </section>
 
       {/* Experience */}
-      <section id="experience" className="section">
+      <section id="experience" className="section reduced-spacing-section">
         <Experience />
       </section>
 

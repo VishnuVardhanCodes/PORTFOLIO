@@ -56,15 +56,21 @@
 
 /* Center skills section vertically */
 .skills-section {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.reduced-spacing-section {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  min-height: auto !important;
+}
+
 /* Logo loop container */
 .skills-loop-wrapper {
-  height: 220px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -78,9 +84,9 @@
   -webkit-text-fill-color: transparent;
   color: #00d9f5;
   /* Fallback color matching education */
-  font-size: 8rem;
-  /* Increased size as requested */
-  margin-bottom: 4rem !important;
+  font-size: 4rem;
+  /* Match Internship Experience size */
+  margin-bottom: 3rem !important;
   letter-spacing: 2px;
   text-shadow: 0 0 30px rgba(0, 217, 245, 0.3);
   /* Cyan glow */

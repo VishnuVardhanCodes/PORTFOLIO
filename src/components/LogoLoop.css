@@ -32,18 +32,40 @@
 .logoloop__item {
   color: var(--text-primary);
   display: flex;
+  flex-direction: column;
+  /* Stack icon and text */
   align-items: center;
   justify-content: center;
-
-  font-size: var(--icon-size);
-
+  gap: 12px;
+  /* Space between icon and text */
   transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.logoloop__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--icon-size);
+}
+
+.logoloop__label {
+  font-size: 1.4rem;
+  /* Increased text size for skills */
+  font-weight: 600;
+  color: var(--text-primary);
+  opacity: 0.9;
+  white-space: nowrap;
 }
 
 /* Hover effect */
 .logoloop__item:hover {
   color: var(--accent-color);
-  transform: scale(1.25) translateY(-6px);
+  transform: scale(1.15) translateY(-6px);
+}
+
+.logoloop__item:hover .logoloop__label {
+  color: var(--accent-color);
+  opacity: 1;
 }
 
 /* Icons rendered as React nodes */

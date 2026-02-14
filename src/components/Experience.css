@@ -1,14 +1,14 @@
 /* Experience Section Styling */
 
 .experience-section {
-    padding: 100px 0;
+    padding: 0;
     position: relative;
     overflow: hidden;
 }
 
 .experience-timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 40px 0;
 }
@@ -27,7 +27,7 @@
 
 /* Timeline Item Container */
 .timeline-item {
-    padding: 10px 40px;
+    padding: 10px 25px;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -66,6 +66,7 @@
 /* Timeline Card */
 .timeline-card {
     padding: 2.5rem;
+    min-height: 380px;
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     border-radius: 16px;

@@ -51,10 +51,12 @@ const LogoLoop = memo(({ logos, speed = 0.5, logoSize = 56 }) => {
           <div
             className="logoloop__item"
             key={i}
-            style={{ fontSize: logoSize }}
             title={item.title}
           >
-            {item.node}
+            <div className="logoloop__icon" style={{ fontSize: logoSize }}>
+              {item.node}
+            </div>
+            <span className="logoloop__label">{item.title}</span>
           </div>
         ))}
       </div>
