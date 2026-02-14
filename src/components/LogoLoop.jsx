@@ -10,34 +10,55 @@ const useResizeObserver = (callback, refs) => {
   }, [callback, refs]);
 };
 
-const useAnimationLoop = (trackRef, speed, width, hovered) => {
-  const raf = useRef();
-  const offset = useRef(0);
+// Animation logic moved into LogoLoop component
 
-  useEffect(() => {
-    const animate = () => {
-      offset.current += hovered ? speed * 0.2 : speed;
-      trackRef.current.style.transform = `translateX(-${offset.current % width}px)`;
-      raf.current = requestAnimationFrame(animate);
-    };
-    raf.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(raf.current);
-  }, [speed, width, hovered, trackRef]);
-};
-
-const LogoLoop = memo(({ logos, speed = 0.5, logoSize = 56 }) => {
+const LogoLoop = memo(({ logos, speed = 0.5, logoSize = 56, direction = "left" }) => {
   const containerRef = useRef(null);
   const trackRef = useRef(null);
   const [width, setWidth] = useState(0);
   const [hovered, setHovered] = useState(false);
 
+  // Repeat logos multiple times to ensure no gap on very wide screens
+  const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
+
   const update = useCallback(() => {
-    setWidth(trackRef.current.scrollWidth / 2);
-  }, []);
+    if (trackRef.current && logos.length > 0) {
+      const items = trackRef.current.children;
+      if (items.length > logos.length) {
+        // Use the offset of the first item of the second set as the loop width
+        const loopWidth = items[logos.length].offsetLeft;
+        if (loopWidth > 0) setWidth(loopWidth);
+      }
+    }
+  }, [logos.length]);
 
   useResizeObserver(update, [containerRef]);
 
-  useAnimationLoop(trackRef, speed, width, hovered);
+  // Refined animation loop to support direction and seamless reset
+  const raf = useRef();
+  const offset = useRef(0);
+
+  useEffect(() => {
+    const animate = () => {
+      if (width > 0) {
+        const move = hovered ? speed * 0.2 : speed;
+
+        // Update offset based on direction
+        if (direction === "left") {
+          offset.current += move;
+        } else {
+          offset.current -= move;
+        }
+
+        // Apply seamless modulo transform
+        const x = ((offset.current % width) + width) % width;
+        trackRef.current.style.transform = `translateX(-${x}px)`;
+      }
+      raf.current = requestAnimationFrame(animate);
+    };
+    raf.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf.current);
+  }, [speed, width, hovered, direction]);
 
   return (
     <div
@@ -47,7 +68,7 @@ const LogoLoop = memo(({ logos, speed = 0.5, logoSize = 56 }) => {
       onMouseLeave={() => setHovered(false)}
     >
       <div className="logoloop__track" ref={trackRef}>
-        {[...logos, ...logos].map((item, i) => (
+        {repeatedLogos.map((item, i) => (
           <div
             className="logoloop__item"
             key={i}
