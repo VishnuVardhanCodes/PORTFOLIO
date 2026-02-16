@@ -12,7 +12,7 @@ This portfolio reflects my journey as a Student, Frontend Developer, and AI Enth
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-🛠️ **Tech Stack**
+🛠️**Tech Stack**
 
 - React (Create React App)
 
