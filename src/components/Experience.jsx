@@ -5,7 +5,7 @@ import "./Experience.css";
 const experiences = [
   {
     side: "left",
-    date: "August 2025 – Present",
+    date: "February 2026 – Present",
     title: "Full Stack Developer Intern",
     company: "NIRVAHA WELLNESS LLP",
     description: [
@@ -13,7 +13,7 @@ const experiences = [
       "Developing and optimizing web components for enhanced user experience.",
       "Collaborating on full-stack solutions to improve overall application performance."
     ],
-    tags: ["React.js", "Frontend Development", "Full Stack", "JavaScript", "CSS"],
+    tags: ["GitHub", "Frontend Development", "HTML", "CSS", "JavaScript"],
     logo: process.env.PUBLIC_URL + "/images/nirvaha.png"
   },
   {
