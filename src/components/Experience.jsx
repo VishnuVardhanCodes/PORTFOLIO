@@ -5,6 +5,19 @@ import "./Experience.css";
 const experiences = [
   {
     side: "left",
+    date: "August 2025 – Present",
+    title: "Full Stack Developer Intern",
+    company: "NIRVAHA WELLNESS LLP",
+    description: [
+      "Contributing to frontend development using React.js and modern UI/UX principles.",
+      "Developing and optimizing web components for enhanced user experience.",
+      "Collaborating on full-stack solutions to improve overall application performance."
+    ],
+    tags: ["React.js", "Frontend Development", "Full Stack", "JavaScript", "CSS"],
+    logo: process.env.PUBLIC_URL + "/images/nirvaha.png"
+  },
+  {
+    side: "right",
     date: "May 2025 – August 2025",
     title: "Artificial Intelligence Intern [Hybrid]",
     company: "Viswam.AI, Swecha Foundation, IIIT-H",
@@ -17,7 +30,7 @@ const experiences = [
     logo: process.env.PUBLIC_URL + "/images/swecha.png"
   },
   {
-    side: "right",
+    side: "left",
     date: "May 2025 – July 2025",
     title: "Web Development Intern",
     company: "CodSoft",
@@ -31,7 +44,7 @@ const experiences = [
     logo: process.env.PUBLIC_URL + "/images/codesoft.png"
   },
   {
-    side: "left",
+    side: "right",
     date: "June 2024 – August 2024",
     title: "Python Internship [Online]",
     company: "Cognifyz Technologies",
