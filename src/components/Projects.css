@@ -1,0 +1,40 @@
+.projects-marquee-container {
+    overflow: hidden;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+}
+
+.projects-marquee-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+}
+
+.project-card-wrapper {
+    flex: 0 0 400px;
+    width: 400px;
+}
+
+.projects-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pause animation on hover */
+.projects-marquee-container:hover .projects-marquee-track {
+    animation-play-state: paused !important;
+}
+
+@media (max-width: 768px) {
+    .project-card-wrapper {
+        flex: 0 0 320px;
+        width: 320px;
+    }
+}
