@@ -44,17 +44,6 @@ function Projects() {
           <div className="projects-marquee-container">
             <motion.div
               className="projects-marquee-track"
-              animate={{
-                x: ["0%", "-25%"]
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 25,
-                  ease: "linear",
-                }
-              }}
             >
               {/* Repeating the list 4 times to ensure no gaps on wide screens */}
               {[...projectData, ...projectData, ...projectData, ...projectData].map((project, index) => (
