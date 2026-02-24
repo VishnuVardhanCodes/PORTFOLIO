@@ -9,21 +9,24 @@ const projectData = [
     description: "A modern, responsive personal portfolio built using React and Bootstrap with smooth scrolling and animations.",
     tech: "React, Bootstrap, CSS",
     github: "#",
-    live: "#"
+    live: "#",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"
   },
   {
     title: "Online Quiz Portal",
     description: "A frontend-focused online quiz system with timer, autosave, role-based dashboards, and exam integrity features.",
     tech: "React, JavaScript, Bootstrap",
     github: "https://github.com/VivekGoudAdula/AI-Quiz-Portal.git",
-    live: "https://ai-quiz-portal-rosy.vercel.app/"
+    live: "https://ai-quiz-portal-rosy.vercel.app/",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2070"
   },
   {
     title: "AI Presentation Generator",
     description: "An AI-based system that generates complete PowerPoint presentations from user prompts.",
     tech: "React, AI APIs, JavaScript",
     github: "#",
-    live: "#"
+    live: "#",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2070"
   }
 ];
 
@@ -48,8 +51,16 @@ function Projects() {
               {/* Repeating the list 4 times to ensure no gaps on wide screens */}
               {[...projectData, ...projectData, ...projectData, ...projectData].map((project, index) => (
                 <div key={index} className="project-card-wrapper">
-                  <Card className="glass-card h-100">
-                    <Card.Body className="d-flex flex-column">
+                  <Card
+                    className="glass-card h-100 project-card"
+                    style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      border: 'none'
+                    }}
+                  >
+                    <Card.Body className="d-flex flex-column project-card-content">
                       <h3 className="mb-3">{project.title}</h3>
                       <p className="mb-4">
                         {project.description}
