@@ -24,8 +24,8 @@ const projectData = [
     title: "AI Presentation Generator",
     description: "An AI-based system that generates complete PowerPoint presentations from user prompts.",
     tech: "React, AI APIs, JavaScript",
-    github: "#",
-    live: "#",
+    github: "https://github.com/VishnuVardhanCodes/PORTFOLIO",
+    live: "https://vishnuvardhanpolla.vercel.app/",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2070"
   }
 ];
