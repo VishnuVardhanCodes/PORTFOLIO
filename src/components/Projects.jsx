@@ -15,8 +15,8 @@ const projectData = [
     title: "Online Quiz Portal",
     description: "A frontend-focused online quiz system with timer, autosave, role-based dashboards, and exam integrity features.",
     tech: "React, JavaScript, Bootstrap",
-    github: "#",
-    live: "#"
+    github: "https://github.com/VivekGoudAdula/AI-Quiz-Portal.git",
+    live: "https://ai-quiz-portal-rosy.vercel.app/"
   },
   {
     title: "AI Presentation Generator",
