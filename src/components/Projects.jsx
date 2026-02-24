@@ -32,6 +32,7 @@ const projectData = [
     description: "A lifestyle and productivity app for students featuring academic tracking and task management.",
     tech: "React Native, Node.js, MongoDB",
     github: "https://github.com/VishnuVardhanCodes",
+    live: " ",
     image: "https://images.unsplash.com/photo-1523240715629-67d855adcdad?auto=format&fit=crop&q=80&w=2070"
   },
   {
@@ -39,6 +40,7 @@ const projectData = [
     description: "An AI-powered assistant for entrepreneurs to streamline business planning and market analysis.",
     tech: "AI APIs, React, Tailwind",
     github: "https://github.com/VishnuVardhanCodes",
+    live: " ",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070"
   },
   {
@@ -46,6 +48,7 @@ const projectData = [
     description: "A comprehensive emergency response platform for real-time safety monitoring and rescue coordination.",
     tech: "React, Firebase, Google Maps API",
     github: "https://github.com/VishnuVardhanCodes",
+    live: " ",
     image: "https://images.unsplash.com/photo-1542884748-2b87b36c6b90?auto=format&fit=crop&q=80&w=2070"
   },
   {
@@ -85,55 +88,50 @@ function Projects() {
             Projects
           </h2>
 
-          <div className="projects-marquee-container">
-            <motion.div
-              className="projects-marquee-track"
-            >
-              {/* Repeating the list 4 times to ensure no gaps on wide screens */}
-              {[...projectData, ...projectData, ...projectData, ...projectData].map((project, index) => (
-                <div key={index} className="project-card-wrapper">
-                  <Card
-                    className="glass-card h-100 project-card"
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.image})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      border: 'none'
-                    }}
-                  >
-                    <Card.Body className="d-flex flex-column project-card-content">
-                      <h3 className="mb-3">{project.title}</h3>
-                      <p className="mb-4">
-                        {project.description}
-                      </p>
-                      <p>
-                        <strong>Tech Stack:</strong> {project.tech}
-                      </p>
+          <div className="projects-grid">
+            {projectData.map((project, index) => (
+              <div key={index} className="project-card-wrapper">
+                <Card
+                  className="glass-card h-100 project-card"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    border: 'none'
+                  }}
+                >
+                  <Card.Body className="d-flex flex-column project-card-content">
+                    <h3 className="mb-3">{project.title}</h3>
+                    <p className="mb-4">
+                      {project.description}
+                    </p>
+                    <p>
+                      <strong>Tech Stack:</strong> {project.tech}
+                    </p>
 
-                      <div className="d-flex gap-2 mt-auto pt-3">
+                    <div className="d-flex gap-2 mt-auto pt-3">
+                      <Button
+                        href={project.github}
+                        target="_blank"
+                        className="flex-grow-1 project-btn btn-github"
+                      >
+                        <FaGithub /> GitHub
+                      </Button>
+
+                      {project.live && (
                         <Button
-                          href={project.github}
+                          href={project.live}
                           target="_blank"
-                          className="flex-grow-1 project-btn btn-github"
+                          className="flex-grow-1 project-btn btn-live"
                         >
-                          <FaGithub /> GitHub
+                          <FaExternalLinkAlt /> Live
                         </Button>
-
-                        {project.live && (
-                          <Button
-                            href={project.live}
-                            target="_blank"
-                            className="flex-grow-1 project-btn btn-live"
-                          >
-                            <FaExternalLinkAlt /> Live
-                          </Button>
-                        )}
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </div>
-              ))}
-            </motion.div>
+                      )}
+                    </div>
+                  </Card.Body>
+                </Card>
+              </div>
+            ))}
           </div>
         </motion.div>
       </Container>
