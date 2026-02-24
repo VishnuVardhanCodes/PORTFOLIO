@@ -54,14 +54,18 @@
     overflow: hidden;
 }
 
-/* Pause animation on hover */
-.projects-marquee-container:hover .projects-marquee-track {
-    animation-play-state: paused !important;
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-    .project-card-wrapper {
-        flex: 0 0 320px;
-        width: 320px;
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
     }
 }

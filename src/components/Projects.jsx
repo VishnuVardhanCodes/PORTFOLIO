@@ -21,19 +21,19 @@ const projectData = [
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2070"
   },
   {
-    title: "FC Barcelona Landing Page",
-    description: "A visually stunning, responsive landing page for FC Barcelona built with modern web technologies.",
-    tech: "HTML, CSS, JavaScript",
-    github: "https://github.com/VishnuVardhanCodes/FC-Barcelona-Landing-Page",
-    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=2436"
-  },
-  {
     title: "StudLyf Application",
     description: "A lifestyle and productivity app for students featuring academic tracking and task management.",
     tech: "React Native, Node.js, MongoDB",
     github: "https://github.com/VishnuVardhanCodes",
     live: " ",
-    image: "https://images.unsplash.com/photo-1523240715629-67d855adcdad?auto=format&fit=crop&q=80&w=2070"
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=2071"
+  },
+  {
+    title: "FC Barcelona Landing Page",
+    description: "A visually stunning, responsive landing page for FC Barcelona built with modern web technologies.",
+    tech: "HTML, CSS, JavaScript",
+    github: "https://github.com/VishnuVardhanCodes/FC-Barcelona-Landing-Page",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=2436"
   },
   {
     title: "Startup Copilot",
@@ -76,7 +76,16 @@ const projectData = [
 
 function Projects() {
   return (
-    <section className="projects-section" id="projects">
+    <section
+      className="projects-section"
+      id="projects"
+      style={{
+        backgroundImage: `linear-gradient(rgba(10, 10, 20, 0.85), rgba(10, 10, 20, 0.85)), url(${projectData[2].image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Container fluid className="px-0">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -90,7 +99,14 @@ function Projects() {
 
           <div className="projects-grid">
             {projectData.map((project, index) => (
-              <div key={index} className="project-card-wrapper">
+              <motion.div
+                key={index}
+                className="project-card-wrapper"
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
                 <Card
                   className="glass-card h-100 project-card"
                   style={{
@@ -130,7 +146,7 @@ function Projects() {
                     </div>
                   </Card.Body>
                 </Card>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
