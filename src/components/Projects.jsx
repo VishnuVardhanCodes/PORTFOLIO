@@ -79,12 +79,6 @@ function Projects() {
     <section
       className="projects-section"
       id="projects"
-      style={{
-        backgroundImage: `linear-gradient(rgba(10, 10, 20, 0.85), rgba(10, 10, 20, 0.85)), url(${projectData[2].image})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
     >
       <Container fluid className="px-0">
         <motion.div
