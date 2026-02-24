@@ -8,8 +8,8 @@ const projectData = [
     title: "Student Portfolio Website",
     description: "A modern, responsive personal portfolio built using React and Bootstrap with smooth scrolling and animations.",
     tech: "React, Bootstrap, CSS",
-    github: "#",
-    live: "#",
+    github: "https://github.com/VishnuVardhanCodes/PORTFOLIO",
+    live: "https://vishnuvardhanpolla.vercel.app/",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"
   },
   {
@@ -21,12 +21,11 @@ const projectData = [
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2070"
   },
   {
-    title: "AI Presentation Generator",
-    description: "An AI-based system that generates complete PowerPoint presentations from user prompts.",
-    tech: "React, AI APIs, JavaScript",
-    github: "https://github.com/VishnuVardhanCodes/PORTFOLIO",
-    live: "https://vishnuvardhanpolla.vercel.app/",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2070"
+    title: "FC Barcelona Landing Page",
+    description: "A visually stunning, responsive landing page for FC Barcelona built with modern web technologies.",
+    tech: "HTML, CSS, JavaScript",
+    github: "https://github.com/VishnuVardhanCodes/FC-Barcelona-Landing-Page",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=2436"
   }
 ];
 
@@ -78,13 +77,15 @@ function Projects() {
                           <FaGithub /> GitHub
                         </Button>
 
-                        <Button
-                          href={project.live}
-                          target="_blank"
-                          className="flex-grow-1 project-btn btn-live"
-                        >
-                          <FaExternalLinkAlt /> Live
-                        </Button>
+                        {project.live && (
+                          <Button
+                            href={project.live}
+                            target="_blank"
+                            className="flex-grow-1 project-btn btn-live"
+                          >
+                            <FaExternalLinkAlt /> Live
+                          </Button>
+                        )}
                       </div>
                     </Card.Body>
                   </Card>
