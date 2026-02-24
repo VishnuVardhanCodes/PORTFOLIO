@@ -26,6 +26,48 @@ const projectData = [
     tech: "HTML, CSS, JavaScript",
     github: "https://github.com/VishnuVardhanCodes/FC-Barcelona-Landing-Page",
     image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=2436"
+  },
+  {
+    title: "StudLyf Application",
+    description: "A lifestyle and productivity app for students featuring academic tracking and task management.",
+    tech: "React Native, Node.js, MongoDB",
+    github: "https://github.com/VishnuVardhanCodes",
+    image: "https://images.unsplash.com/photo-1523240715629-67d855adcdad?auto=format&fit=crop&q=80&w=2070"
+  },
+  {
+    title: "Startup Copilot",
+    description: "An AI-powered assistant for entrepreneurs to streamline business planning and market analysis.",
+    tech: "AI APIs, React, Tailwind",
+    github: "https://github.com/VishnuVardhanCodes",
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=2070"
+  },
+  {
+    title: "ResQ360 Application",
+    description: "A comprehensive emergency response platform for real-time safety monitoring and rescue coordination.",
+    tech: "React, Firebase, Google Maps API",
+    github: "https://github.com/VishnuVardhanCodes",
+    image: "https://images.unsplash.com/photo-1542884748-2b87b36c6b90?auto=format&fit=crop&q=80&w=2070"
+  },
+  {
+    title: "ML Hackathon Project",
+    description: "Developed a predictive analytics model and interactive dashboard during an intense machine learning competition.",
+    tech: "Python, Scikit-Learn, Streamlit",
+    github: "https://github.com/VishnuVardhanCodes",
+    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=2070"
+  },
+  {
+    title: "Hack Prix Hackathon",
+    description: "Award-winning web application built in 24 hours addressing real-world environmental challenges.",
+    tech: "React, Node.js, Express",
+    github: "https://github.com/VishnuVardhanCodes",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=2070"
+  },
+  {
+    title: "Sahaay Bot",
+    description: "A compassionate AI chatbot designed to provide mental health support and daily assistance.",
+    tech: "Python, NLP, Flask",
+    github: "https://github.com/VishnuVardhanCodes",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=2070"
   }
 ];
 
