@@ -56,7 +56,7 @@ const projectData = [
     description: "Developed a predictive analytics model and interactive dashboard during an intense machine learning competition.",
     tech: "Python, Scikit-Learn, Streamlit",
     github: "https://github.com/VivekGoudAdula/DATANYX",
-    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=2070"
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2070"
   },
   {
     title: "Hack Prix Hackathon",
