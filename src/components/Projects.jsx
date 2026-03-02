@@ -13,6 +13,14 @@ const projectData = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"
   },
   {
+    title: "Ship or Shame (Blockchain)",
+    description: "A decentralized blockchain project for transparent voting and reputation management. Built with smart contracts and a modern web3 stack.",
+    tech: "Solidity, React, Web3, Ethereum",
+    github: "https://github.com/yourusername/ship-or-shame",
+    live: "https://shiporshame.vercel.app/",
+    image: "/images/monad-bg.png"
+  },
+  {
     title: "Online Quiz Portal",
     description: "A frontend-focused online quiz system with timer, autosave, role-based dashboards, and exam integrity features.",
     tech: "React, JavaScript, Bootstrap",
@@ -104,7 +112,10 @@ function Projects() {
                 <Card
                   className="glass-card h-100 project-card"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.image})`,
+                    backgroundImage:
+                      project.title === "Ship or Shame (Blockchain)"
+                        ? `linear-gradient(120deg, #2c5364 60%, #00f5a0 100%), url(${project.image})`
+                        : `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     border: 'none'
