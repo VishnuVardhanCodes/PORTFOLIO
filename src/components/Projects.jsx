@@ -16,7 +16,7 @@ const projectData = [
     title: "Ship or Shame (Blockchain)",
     description: "A decentralized blockchain project for transparent voting and reputation management. Built with smart contracts and a modern web3 stack.",
     tech: "Solidity, React, Web3, Ethereum",
-    github: "https://github.com/yourusername/ship-or-shame",
+    github: "https://github.com/VivekGoudAdula/ShiporShame",
     live: "https://shiporshame.vercel.app/",
     image: "/images/monad-bg.png"
   },
