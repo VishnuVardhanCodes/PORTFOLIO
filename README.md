@@ -82,7 +82,7 @@ git clone : https://github.com/VishnuVardhanCodes/PORTFOLIO
 Navigate into the project
 cd PORTFOLIO
 
-Install dependencies
+Install dependencies 
 npm install
 
 Start the development server
