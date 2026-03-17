@@ -2,7 +2,7 @@
 
 A modern, fully responsive single-page professional portfolio web application built using React (Create React App) and Bootstrap, designed to showcase my skills, projects, experience, and achievements in a clean and visually engaging way.
 
-This portfolio reflects my journey as a Student, Frontend Developer, and AI Enthusiast, with a focus on UI/UX, performance,  best development practices and Video Editing! 
+This portfolio reflects my journey as a Student, Frontend Developer, and AI Enthusiast, with a focus on UI/UX, performance,  best development practices and Video Editing!  
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
