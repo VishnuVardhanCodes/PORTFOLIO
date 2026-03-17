@@ -45,7 +45,7 @@ This portfolio reflects my journey as a Student, Frontend Developer, and AI Enth
 🧊 Glassmorphism-style cards
 
 🧩 Clean and reusable component structure
-
+ 
 📄 Resume view & download option
 
 📬 Contact form for collaboration & queries
