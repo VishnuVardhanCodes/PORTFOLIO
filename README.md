@@ -16,7 +16,7 @@ This portfolio reflects my journey as a Student, Frontend Developer, and AI Enth
  
 - React (Create React App)
  
-- Bootstrap 5 / React-Bootstrap
+- Bootstrap 5 / React-Bootstrap 
 
 - Framer Motion (Animations)
 
