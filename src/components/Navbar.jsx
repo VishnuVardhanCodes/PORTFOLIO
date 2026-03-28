@@ -44,6 +44,13 @@ const items = [
     hoverStyles: { bgColor: "#ec4899", textColor: "#ffffff" },
   },
   {
+    label: "Resume",
+    href: "#resume",
+    ariaLabel: "Resume",
+    rotation: -4,
+    hoverStyles: { bgColor: "#f43f5e", textColor: "#ffffff" },
+  },
+  {
     label: "Contact",
     href: "#contact",
     ariaLabel: "Contact",

@@ -1,11 +1,9 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 import {
   FaTrophy,
   FaCertificate,
   FaLaptopCode,
-  FaEye,
-  FaDownload,
 } from "react-icons/fa";
 
 // ...existing code...
@@ -17,90 +15,88 @@ function Achievements() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-center mb-5 gradient-text fw-bold">
-          Achievements & Resume
+        <h2 className="text-center mb-5 gradient-text fw-bold" style={{ fontSize: '3rem' }}>
+          My Achievements
         </h2>
 
-        <Row className="g-4">
+        <Row className="g-5 justify-content-center">
           {/* Achievement 1 */}
           <Col md={6} lg={4}>
-            <Card className="glass-card h-100 text-center">
-              <Card.Body>
-                <FaLaptopCode size={40} className="mb-3 text-info" />
-                <h5>Hackathons</h5>
-                <p>
-                  Participated in national-level hackathons and coding
-                  competitions, working on real-world problem statements.
-                </p>
-              </Card.Body>
-            </Card>
+            <motion.div
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Card className="glass-card h-100 text-center border-0 shadow-lg">
+                <Card.Body className="p-5">
+                  <div className="icon-wrapper mb-4">
+                    <FaLaptopCode size={50} className="text-info" />
+                  </div>
+                  <h4 className="fw-bold mb-3">Hackathons</h4>
+                  <p className="opacity-75">
+                    Participated in national-level hackathons and coding
+                    competitions, working on real-world problem statements.
+                  </p>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
 
           {/* Achievement 2 */}
           <Col md={6} lg={4}>
-            <Card className="glass-card h-100 text-center">
-              <Card.Body>
-                <FaCertificate size={40} className="mb-3 text-warning" />
-                <h5>Certifications</h5>
-                <p>
-                  Completed certifications in Web Development, React, Python,
-                  and AI-related technologies.
-                </p>
-              </Card.Body>
-            </Card>
+            <motion.div
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Card className="glass-card h-100 text-center border-0 shadow-lg">
+                <Card.Body className="p-5">
+                  <div className="icon-wrapper mb-4">
+                    <FaCertificate size={50} className="text-warning" />
+                  </div>
+                  <h4 className="fw-bold mb-3">Certifications</h4>
+                  <p className="opacity-75">
+                    Completed certifications in Web Development, React, Python,
+                    and AI-related technologies.
+                  </p>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
 
           {/* Achievement 3 */}
           <Col md={6} lg={4}>
-            <Card className="glass-card h-100 text-center">
-              <Card.Body>
-                <FaTrophy size={40} className="mb-3 text-success" />
-                <h5>Workshops & Awards</h5>
-                <p>
-                  Attended industry workshops and received recognition for
-                  academic and technical performance.
-                </p>
-              </Card.Body>
-            </Card>
+            <motion.div
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Card className="glass-card h-100 text-center border-0 shadow-lg">
+                <Card.Body className="p-5">
+                  <div className="icon-wrapper mb-4">
+                    <FaTrophy size={50} className="text-success" />
+                  </div>
+                  <h4 className="fw-bold mb-3">Workshops & Awards</h4>
+                  <p className="opacity-75">
+                    Attended industry workshops and received recognition for
+                    academic and technical performance.
+                  </p>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
         </Row>
 
-        {/* Resume Section inside Achievements */}
-        <Row className="justify-content-center mt-5">
-          <Col md={8}>
-            <Card className="glass-card text-center">
-              <Card.Body>
-                <h4 className="mb-3">My Resume</h4>
-                <p>
-                  View or download my resume to learn more about my education,
-                  skills, projects, and experience.
-                </p>
-
-                <div className="d-flex justify-content-center gap-3 mt-4">
-                  {/* View Resume */}
-                  <Button
-                    className="btn-custom"
-                    href="/resume.pdf"
-                    target="_blank"
-                  >
-                    <FaEye className="me-2" />
-                    View Resume
-                  </Button>
-
-                  {/* Download Resume */}
-                  <Button
-                    variant="outline-light"
-                    href="/resume.pdf"
-                    download
-                  >
-                    <FaDownload className="me-2" />
-                    Download Resume
-                  </Button>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+        <style jsx="true">{`
+          .icon-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+        `}</style>
       </motion.div>
     </Container>
   );
