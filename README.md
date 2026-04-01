@@ -4,7 +4,7 @@
 -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=wavy&color=00BFFF&height=250&section=header&text=Vishnu%20Vardhan&fontSize=80&animation=fadeIn&fontAlignY=35&desc=Frontend%20Developer%20|%20AI-ML%20Student%20|%205X%20Hackathon%20Winner&descSize=25&descAlignY=65" width="100%" />
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=250&section=header&text=Portfolio&fontSize=80&animation=fadeIn&fontAlignY=35&desc=Polla%20Vishnu%20Vardhan%20|%20AI-ML%20Student%20|%205X%20Hackathon%20Winner&descSize=25&descAlignY=65" width="100%" />
 </p>
 
 <p align="center">
@@ -120,13 +120,13 @@ npm start
 ## ✍️ Let's Connect
 
 <p align="center">
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN_PROFILE">
+  <a href="https://www.linkedin.com/in/polla-vishnu-vardhan/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="https://github.com/VishnuVardhanCodes">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a href="mailto:your.email@example.com">
+  <a href="mailto:vishnumaxpolla32@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
