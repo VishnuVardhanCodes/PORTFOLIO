@@ -15,9 +15,8 @@ html {
 }
 
 :root {
-  /* GLOBAL BACKGROUND REMOVED AS PER REQUEST */
-  
   /* DARK THEME (DEFAULT) */
+  --bg-body: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
 
@@ -34,119 +33,47 @@ html {
   /* FONTS */
   --font-heading: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Outfit', sans-serif;
-  
-  /* TYPING TEXT COLORS */
-  --typing-1: #00f5a0;
-  --typing-2: #ff007f;
-  --typing-3: #61dafb;
-  --typing-4: #ffcc80;
-}
-/* Theme support via [data-theme] */
-
-[data-theme="default"] {
-  --bg-current: #0f172a;
-  --text-primary: #f8fafc;
-  --text-secondary: rgba(248, 250, 252, 0.7);
-  --card-bg: rgba(255, 255, 255, 0.08);
-  --accent-gradient: linear-gradient(90deg, #00f5a0, #00d9f5);
-  --name-gradient: linear-gradient(135deg, #e040fb, #f48fb1, #ffcc80);
-  --nav-pill-bg: rgba(15, 23, 42, 0.85);
+  /* TYPING TEXT COLORS (DARK MODE) */
   --typing-1: #00f5a0;
   --typing-2: #ff007f;
   --typing-3: #61dafb;
   --typing-4: #ffcc80;
 }
 
-[data-theme="retro"] {
-  --bg-current: #ece3ca;
-  --text-primary: #282425;
-  --text-secondary: rgba(40, 36, 37, 0.8);
-  --card-bg: rgba(0, 0, 0, 0.08);
-  --accent-gradient: linear-gradient(90deg, #d97706, #b45309);
-  --name-gradient: linear-gradient(135deg, #92400e, #78350f, #a16207);
-  --nav-pill-bg: rgba(236, 227, 202, 0.9);
-  --typing-1: #c026d3;
-  --typing-2: #ea580c;
-  --typing-3: #16a34a;
-  --typing-4: #2563eb;
-}
+/* LIGHT THEME OVERRIDES */
+body.light-theme {
+  --bg-body: #ffffff;
+  background: #ffffff !important;
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(0, 0, 0, 0.7);
 
-[data-theme="cyberpunk"] {
-  --bg-current: #ffee00;
-  --text-primary: #000000;
-  --text-secondary: rgba(0, 0, 0, 0.8);
-  --card-bg: rgba(0, 0, 0, 0.1);
-  --accent-gradient: linear-gradient(90deg, #ff00ff, #00ffff);
-  --name-gradient: linear-gradient(135deg, #ff00ff, #ff6600, #00ffff);
-  --nav-pill-bg: rgba(0, 0, 0, 0.85);
-  --typing-1: #ff00ff;
-  --typing-2: #0000ff;
-  --typing-3: #008000;
-  --typing-4: #ff4500;
-}
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
-[data-theme="valentine"] {
-  --bg-current: #fae7f1;
-  --text-primary: #af4670;
-  --text-secondary: rgba(175, 70, 112, 0.8);
-  --card-bg: rgba(255, 255, 255, 0.4);
-  --accent-gradient: linear-gradient(90deg, #e11d48, #ec4899);
-  --name-gradient: linear-gradient(135deg, #be185d, #e11d48, #f472b6);
-  --nav-pill-bg: rgba(250, 231, 241, 0.9);
-  --typing-1: #e11d48;
-  --typing-2: #be123c;
-  --typing-3: #9f1239;
-  --typing-4: #881337;
-}
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #1a1a1a;
+  --nav-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 
-[data-theme="aqua"] {
-  --bg-current: #0b2c4d;
-  --text-primary: #09ecf3;
-  --text-secondary: rgba(9, 236, 243, 0.8);
-  --card-bg: rgba(255, 255, 255, 0.1);
-  --accent-gradient: linear-gradient(90deg, #00f5a0, #09ecf3);
-  --name-gradient: linear-gradient(135deg, #06b6d4, #22d3ee, #67e8f9);
-  --nav-pill-bg: rgba(11, 44, 77, 0.85);
-  --typing-1: #00f5a0;
-  --typing-2: #60a5fa;
-  --typing-3: #2dd4bf;
-  --typing-4: #93c5fd;
+  --accent-gradient: linear-gradient(90deg, #00b09b, #96c93d);
+  /* Fresh Green/Teal for light mode */
+  --about-icon-color: #333333;
+  /* TYPING TEXT COLORS (LIGHT MODE - DEEPER CONTRAST) */
+  --typing-1: #00a876;
+  --typing-2: #d6006e;
+  --typing-3: #0084a8;
+  --typing-4: #c7882d;
 }
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-current, #0f172a) !important;
+  background: var(--bg-body);
   color: var(--text-primary);
   overflow-x: hidden;
-  transition: background 0.5s ease, color 0.5s ease;
-  min-height: 100vh;
+  transition: background 0.6s ease-in-out, color 0.5s ease;
 }
 
 .galaxy-container {
   transition: opacity 0.6s ease-in-out;
-}
-
-/* ===============================
-   PORTFOLIO NAME - HERO TITLE
-================================ */
-.portfolio-name {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 900;
-  font-size: 5rem;
-  letter-spacing: 4px;
-  margin-bottom: 1rem;
-  background: var(--name-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: none;
-  line-height: 1.1;
-  transition: all 0.5s ease;
-}
-
-/* Link reset */
-.no-underline {
-  text-decoration: none !important;
 }
 
 h1,

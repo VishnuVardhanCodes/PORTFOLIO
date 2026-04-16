@@ -59,11 +59,13 @@ const items = [
   },
 ];
 
-function NavbarComponent() {
+function NavbarComponent({ toggleTheme, isLightTheme }) {
   return (
     <BubbleMenu
       logo="/logo.jpg"
       items={items}
+      toggleTheme={toggleTheme}
+      isLightTheme={isLightTheme}
       menuAriaLabel="Toggle navigation"
       menuBg="#ffffff"
       menuContentColor="#111111"

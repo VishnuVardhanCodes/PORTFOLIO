@@ -1,5 +1,5 @@
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./Galaxy.css";
 
 const vertexShader = `
@@ -38,7 +38,6 @@ void main() {
     float speed = uTime * 0.5;
     
     vec3 finalColor = vec3(0.0);
-    float alpha = 0.0;
     
     // Create multiple layers of stars for depth
     for(float i = 0.0; i < 6.0; i++) {
@@ -66,11 +65,17 @@ void main() {
         vec3 col = 0.5 + 0.5 * cos(uHueShift * 0.01 + i + vec3(0, 2, 4));
         
         finalColor += star * mask * col;
-        alpha += star * mask;
     }
 
-    // Output with alpha transparency to let theme background show through
-    gl_FragColor = vec4(finalColor, clamp(alpha, 0.0, 1.0));
+    // Handle theme-based inversion
+    if(uInvert) {
+        // Dark stars on white background
+        finalColor = clamp(1.0 - finalColor, 0.0, 1.0);
+        gl_FragColor = vec4(finalColor, 1.0);
+    } else {
+        // Light stars on black background
+        gl_FragColor = vec4(finalColor, 1.0);
+    }
 }
 `;
 
@@ -79,6 +84,7 @@ export default function Galaxy({
   glowIntensity = 0.4,
   saturation = 0.6,
   hueShift = 220,
+  isLightTheme = false,
 }) {
   const ref = useRef(null);
 
@@ -100,6 +106,7 @@ export default function Galaxy({
         uHueShift: { value: hueShift },
         uGlowIntensity: { value: glowIntensity },
         uSaturation: { value: saturation },
+        uInvert: { value: isLightTheme },
       },
     });
 
@@ -130,7 +137,7 @@ export default function Galaxy({
       window.removeEventListener("resize", resize);
       container.removeChild(gl.canvas);
     };
-  }, [density, glowIntensity, hueShift, saturation]);
+  }, [density, glowIntensity, hueShift, isLightTheme, saturation]);
 
   return <div ref={ref} className="galaxy-container" />;
 }
