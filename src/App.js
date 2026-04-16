@@ -13,27 +13,13 @@ import TechLoop from "./components/TechLoop";
 import "./App.css";
 
 function App() {
-  const [isLightTheme, setIsLightTheme] = useState(false);
-
-  const toggleTheme = () => {
-    setIsLightTheme((prev) => !prev);
-  };
-
-  useEffect(() => {
-    if (isLightTheme) {
-      document.body.classList.add("light-theme");
-    } else {
-      document.body.classList.remove("light-theme");
-    }
-  }, [isLightTheme]);
-
   return (
     <>
       {/* Galaxy Background */}
-      <Galaxy isLightTheme={isLightTheme} />
+      <Galaxy />
 
       {/* Navigation */}
-      <NavbarComponent toggleTheme={toggleTheme} isLightTheme={isLightTheme} />
+      <NavbarComponent />
 
       {/* About */}
       <section id="about" className="section">

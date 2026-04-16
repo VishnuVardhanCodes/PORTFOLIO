@@ -141,7 +141,7 @@ function About() {
   };
 
   return (
-    <Container>
+    <Container style={{ paddingTop: '120px' }}>
       {/* 1. NAME & TITLE SECTION */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
@@ -149,19 +149,7 @@ function About() {
         transition={{ duration: 0.8 }}
         className="text-center mb-5"
       >
-        <h1
-          style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: 800,
-            background: "linear-gradient(90deg, #e040fb, #f48fb1, #ffcc80)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            fontSize: "4.5rem",
-            marginBottom: "1rem",
-            letterSpacing: "2px",
-            textShadow: "none",
-          }}
-        >
+        <h1 className="portfolio-name">
           VISHNU VARDHAN
         </h1>
 
