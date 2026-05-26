@@ -1,7 +1,7 @@
 <!-- 
   🚀 MODERN PORTFOLIO | VISHNU VARDHAN
   Designed for excellence, performance, and visual impact.
---> 
+-->  
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=250&section=header&text=Portfolio&fontSize=80&animation=fadeIn&fontAlignY=35&desc=Polla%20Vishnu%20Vardhan%20|%20AI-ML%20Student%20|%205X%20Hackathon%20Winner&descSize=25&descAlignY=65" width="100%" />
