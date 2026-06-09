@@ -25,7 +25,7 @@
 
 A high-performance, visually stunning personal portfolio built with **React**, featuring premium glassmorphism effects, dynamic animations, and a focus on high-quality user experience. This project isn't just a portfolio; it's a testament to **engineering excellence** and **design precision**.
 
----
+--- 
 
 ## 💎 Core Pillars
 
